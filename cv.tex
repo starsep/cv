@@ -11,6 +11,7 @@
 \usepackage{verbatim}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
+\usepackage[firstyear=2007,lastyear=2015]{moderntimeline}
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -59,14 +60,17 @@
 \makecvtitle
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\tlcventry{2014}{0}{Computer Science}{University of Warsaw}{}{}{}
+\tlcventry{2011}{2014}{High School}{Polish Navy High School}{Gdynia}{Math and CS Class}{}
+\tlcventry{2008}{2011}{Junior High School}{I Gimnazjum}{Tczew}{Advanced English Class}{}
 %\section{Master thesis}
 %\cvitem{title}{\emph{Title}}
 %\cvitem{supervisors}{Supervisors}
 %\cvitem{description}{Short thesis abstract}
 
+\begin{comment}
 \section{Experience}
 \subsection{Vocational}
 \cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
@@ -89,21 +93,22 @@ Detailed achievements:%
 \cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
 \subsection{Miscellaneous}
 \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\end{comment}
 
 \section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
+\cvitemwithcomment{Polish}{Native}{}
+\cvitemwithcomment{English}{Upper Intermediate}{}
+%\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
 \section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 1}{C, C++}{category 4}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 2}{PHP, python}{category 5}{XXX, YYY, ZZZ}
+\cvdoubleitem{category 3}{Java, Android}{category 6}{XXX, YYY, ZZZ}
 
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{Contract bridge}{Description}
+\cvitem{Board games}{Description}
+\cvitem{Music}{Description}
 
 \section{Extra 1}
 \cvlistitem{Item 1}
