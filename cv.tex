@@ -5,13 +5,16 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 \usepackage{verbatim}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage[firstyear=2008,lastyear=2015]{moderntimeline}
+\usepackage{graphicx}
+\usepackage{epstopdf} %%package to overcome problem with eps in pdf files
+\usepackage{float}
+\restylefloat{figure}
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -55,9 +58,26 @@
 %----------------------------------------------------------------------------------
 
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+
 \makecvtitle
+
+\begin{figure}[h!]
+  \includegraphics[totalheight=1cm]{images/android.eps}
+  \includegraphics[totalheight=1cm]{images/c.eps}
+  \includegraphics[totalheight=1cm]{images/cpp.eps}
+  \includegraphics[totalheight=1cm]{images/html.eps}
+  \includegraphics[totalheight=1cm]{images/laravel.eps}
+  \includegraphics[totalheight=1cm]{images/php.eps}
+  \includegraphics[totalheight=1cm]{images/python.eps}
+  \includegraphics[totalheight=1cm]{images/MySQL.eps}
+  \includegraphics[totalheight=1cm]{images/java.eps}
+  \includegraphics[totalheight=1cm]{images/sqlite.eps}
+  \includegraphics[totalheight=1cm]{images/psql.eps}
+  \includegraphics[totalheight=1cm]{images/ocaml.eps}
+  \includegraphics[totalheight=1cm]{images/javascript.eps}
+    %\caption{used by \citet[p.~4]{XXXXX}.}
+    %\label{fig:verticalcell}
+\end{figure}
 
 \section{Education}
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
