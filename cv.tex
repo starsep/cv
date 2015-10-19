@@ -1,11 +1,4 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 \usepackage{verbatim}
 \usepackage{polski}
@@ -30,12 +23,16 @@
    }%
 }
 
-\newcommand{\doublecventrylogo}[9][.25em]{% 
-\cvdoubleitem[#1]{#2}
-  {\hfill \raisebox{-0.5\height}{\includegraphics[width=#4]{#3}}}
-  {#5}
-  {\hfill \raisebox{-0.5\height}{\includegraphics[width=#7]{#6}}}
+\newcommand{\cvtripleitemlogo}[7][.25em]{%
+ \cvtripleitem[.25em]
+  {#2}
+  {\raisebox{-0.3\height}{\includegraphics[width=8mm]{#3}}}
+  {#4}
+  {\raisebox{-0.3\height}{\includegraphics[width=8mm]{#5}}}
+  {#6}
+  {\raisebox{-0.3\height}{\includegraphics[width=8mm]{#7}}}
 }
+
 
     
 % moderncv themes
@@ -52,28 +49,14 @@
 % personal data
 \firstname{Filip}
 \familyname{Czaplicki}
-\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\title{Resumé}                               % optional, remove / comment the line if not wanted
 \address{Klarnecistów 27}{02-875}{Warsaw Poland}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \mobile{+48~600~131~257}                          % optional, remove / comment the line if not wanted
-%\phone{+48~()~678~901}                           % optional, remove / comment the line if not wanted
-%\fax{+3~(456)~789~012}                             % optional, remove / comment the line if not wanted
 \email{filipczaplicki@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{starsep.com}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 
 \begin{document}
 
@@ -83,7 +66,7 @@
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 \tlcventry{2014}{0}{Computer Science}{University of Warsaw}{}{}{}
-\tlcventry{2011}{2014}{High School}{Polish Navy High School}{Gdynia}{Math and CS Class}{}
+\tlcventry{2011}{2014}{High School}{III Polish Navy High School}{Gdynia}{Math and CS Class}{}
 \tlcventry{2008}{2011}{Junior High School}{I Gimnazjum}{Tczew}{Advanced English Class}{}
 %\section{Master thesis}
 %\cvitem{title}{\emph{Title}}
@@ -122,23 +105,53 @@ Detailed achievements:%
 
 \section{Computer skills}
 Technologies I feel confident with: \\
-\doublecventrylogo{Java}{images/java.eps}{5mm}{C++}{images/cpp.eps}{12mm}{}{}
-\doublecventrylogo{Java}{images/java.eps}{5mm}{C++}{images/cpp.eps}{12mm}{}{}
+\cvtripleitemlogo
+  {C}{images/c.eps}
+  {C++}{images/cpp.eps}
+  {Qt}{images/Qt.eps}
 Technologies I can do something with: \\
-\doublecventrylogo{Java}{images/java.eps}{5mm}{C++}{images/cpp.eps}{12mm}{}{}
-\doublecventrylogo{Java}{images/java.eps}{5mm}{C++}{images/cpp.eps}{12mm}{}{}
+\cvtripleitemlogo
+  {Java}{images/java.eps}
+  {Android}{images/android.eps}
+  {Git}{images/git.eps}
+\cvtripleitemlogo
+  {HTML}{images/html.eps}
+  {CSS}{images/css.eps}
+  {JavaScript}{images/javascript.eps}
+\cvtripleitemlogo
+  {PHP}{images/php.eps}
+  {Laravel}{images/laravel.eps}
+  {MySQL}{images/MySQL.eps}
+\cvtripleitemlogo
+  {Bash}{images/bash.eps}
+  {Z Shell}{images/zsh.eps}
+  {Linux}{images/linux.eps}
 Technologies I know something about: \\
-\doublecventrylogo{Java}{images/java.eps}{5mm}{C++}{images/cpp.eps}{12mm}{}{}
-\doublecventrylogo{Java}{images/java.eps}{5mm}{C++}{images/cpp.eps}{12mm}{}{}
-\section{Interests}
-\cvitem{Contract bridge}{Description}
-\cvitem{Board games}{Description}
-\cvitem{Music}{Description}
+\cvtripleitemlogo
+  {OCaml}{images/ocaml.eps}
+  {PostgreSQL}{images/psql.eps}
+  {SQLite}{images/sqlite.eps}
+\cvtripleitemlogo
+  {OpenGL}{images/opengl.eps}
+  {Tex}{images/tex.eps}
+  {Python}{images/python.eps}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%\newpage
+  
+\section{Interests}
+\cvitem{Contract bridge}{I have played bridge since high school. Currently I play in one of the University of Warsaw bridge teams in $4^{th}$ polish league.}
+\cvitem{Board games}{I like playing board games such as Carcassonne, Rummikub, Scrabble, Monopoly, Catan, Dixit, Battlestar Galactica, Agricola, chess and checkers.}
+\cvitem{Music}{I like listening to music, mainly rock or metal genres. Sometimes I listen to electronic or classic music. \href{http://www.last.fm/pl/user/Starsep}{My last.fm profile}}
+\cvitem{Algorithmics}{I like solving algorithmic problems.
+\href{http://pl.spoj.com/status/starsep/}{My Polish SPOJ profile;}
+\href{http://oi.edu.pl/contestants/Filip\%20Czaplicki/}{Polish Olimpiad in Informatics profile}}}
+  
+%\section{About me}
+%\cvlistitem{I like solving algorithmic problems. \\
+%  \href{http://pl.spoj.com/status/starsep/}{My Polish SPOJ profile}\\
+%  \href{http://oi.edu.pl/contestants/Filip\%20Czaplicki/}{Polish Olimpiad in Informatics profile}}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
 
 \end{document}
 
