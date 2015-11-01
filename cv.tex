@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{epstopdf} %%package to overcome problem with eps in pdf files
 \usepackage{float}
+\usepackage{tikz}
 \restylefloat{figure}
 
 \newcommand*{\cvtripleitem}[7][.25em]{%
@@ -33,7 +34,7 @@
   {\raisebox{-0.3\height}{\includegraphics[width=8mm]{#7}}}
 }
 
-
+\newcommand\githublogo{\raisebox{-1pt}{\includegraphics[height=9pt]{github}}\ }
     
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -54,7 +55,7 @@
 \mobile{+48~600~131~257}                          % optional, remove / comment the line if not wanted
 \email{filipczaplicki@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{starsep.com}                         % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\extrainfo{\githublogo \httplink{github.com/starsep}}              % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
