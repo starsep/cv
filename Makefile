@@ -1,13 +1,13 @@
-all: images cv.pdf resume.pdf cv-compressed.pdf
+all: images docs/cv.pdf docs/resume.pdf docs/cv-compressed.pdf
 
-cv.pdf: cv.tex
-	pdflatex -interaction=nonstopmode cv.tex
+docs/cv.pdf: cv.tex
+	@-pdflatex -output-directory=docs -interaction=nonstopmode $< || true
 
-resume.pdf: cv.pdf
-	cp cv.pdf resume.pdf
+docs/resume.pdf: docs/cv.pdf
+	cp $< $@
 
-cv-compressed.pdf: cv.pdf
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=cv-compressed.pdf cv.pdf
+docs/cv-compressed.pdf: docs/cv.pdf
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
 
 images:
 	cd images; make
@@ -15,5 +15,5 @@ images:
 .PHONY: images clean
 
 clean:
-	rm -f cv.aux cv.log cv.out cv.tex.backup
+	rm -f docs/*
 	cd images; make clean
