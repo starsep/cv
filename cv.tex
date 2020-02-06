@@ -8,6 +8,7 @@
 \usepackage{epstopdf} %%package to overcome problem with eps in pdf files
 \usepackage{float}
 \usepackage{tikz}
+\usepackage[bottom=0.5in]{geometry}
 \restylefloat{figure}
 
 \newcommand*{\cvtripleitem}[7][.25em]{%
@@ -38,7 +39,7 @@
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{red}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -53,84 +54,73 @@
 \title{Resumé}                               % optional, remove / comment the line if not wanted
 \address{}{}{Warsaw, Poland}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \email{filipczaplicki@gmail.com}                               % optional, remove / comment the line if not wanted
-\homepage{starsep.com}                         % optional, remove / comment the line if not wanted
+% \homepage{starsep.com}                         % optional, remove / comment the line if not wanted
 \extrainfo{\githublogo \httplink{github.com/starsep}}              % optional, remove / comment the line if not wanted
-\photo[64pt][0pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \photo[64pt][0pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 \begin{document}
 
 \makecvtitle
 
-\section{Education}
-\tlcventry{2014}{2018}{Computer Science}{}{University of Warsaw}{\textit{Bachelor's degree}}{}
-\cvitem{}{Thesis: \textit{Scalable Graph Algorithms} [details in Work Experience]\newline}
-% \tlcventry{2018}{}{Computer Science}{}{University of Warsaw}{\textit{Master's degree}}{}
-\tlcventry{2018}{}{Computer Science}{}{University of Warsaw}{\textit{Master's degree}}{}
+\section{\textsc{Work Experience}}
 
-\section{Skills}
-\cvitem{Languages}{Polish, English}
-\cvitem{WWW}{HTML, CSS, JavaScript}
-\cvitem{Programming}{Python, Kotlin, Java, C, C++, Haskell, nasm-x64}
-\cvitem{Frameworks}{Django, Android SDK}
-\cvitem{Databases}{PostgreSQL, SQLite}
-\cvitem{DevOps}{Linux, Bash, Zsh, Ansible, Vagrant}
-\cvitem{Build Systems}{GNU make, Gradle}
-\cvitem{Other}{LaTeX, git \newline}
+\textbf{\cventry{2017--present}{Software Engineer}{}{\href{https://qed.ai/}{\underline{QED}}}{Warsaw, Poland}{}}
 
-\section{Algorithmic contests}
+\subsection{\textsc{ScanForm}}
 
-\tldatecventry{2017}{PIZZA}{}{\href{http://pizza.natodia.net/2017/results/finals/}{\underline{PIZZA contest 2017}}}{}{}
-\tldatecventry{2014}{AMPPZ}{}{\href{http://amppz.mimuw.edu.pl/ranking/ranking.html}{\underline{Polish ACM ICPC Final 2014}}}{}{}
-\tlcventry{2013}{2014}{PA}{}{\href{http://potyczki.mimuw.edu.pl/}{\underline{Potyczki Algorytmiczne}} in 2013 and 2014}{}{}
-\tlcventry{2011}{2014}{POI}{}{Polish Olympiad in Informatics \href{https://oi.edu.pl/l/19oi_1etap_wyniki/}{\underline{XIX}} and
-\href{https://oi.edu.pl/l/20oi_1etap_wyniki/}{\underline{XX}} (second round),
-  \newline \href{http://oi.edu.pl/l/21oi_3etap_wyniki/}{\underline{XXI}} ($31^{st}$ spot - bronze medal)}{}{}
-\tlcventry{2011}{2013}{Poznan Open Team Programming Championship}{}{\href{http://2011.mwpz.poznan.pl/results.php}{\underline{2011}},
-  \href{http://2012.mwpz.poznan.pl/results.php}{\underline{2012}} and
-  \href{http://2013.mwpz.poznan.pl/rankingK.php}{\underline{2013}}}{}{}
-\tlcventry{2010}{0}{SPOJ}{}{\href{http://pl.spoj.com/status/starsep/}{\underline{Polish SPOJ profile}} (static contest)}{}{}
-
-\newpage
-
-\section{Work Experience}
-
-\tlcventry{2017/07}{}{Software Engineer}{}{\href{https://qed.ai/}{\underline{QED}}}{Warsaw, Poland}{}
-
-\subsection{ScanForm}
-
-\cvitem{project}{ScanForm Web}
-\cvitem{description}{Web app for realignment and OCR of scanned forms.}
-\cvitem{technologies}{Django, Python, Numpy, Pillow, ImageMagick, Tensorflow}
+\cvitem{app}{ScanForm Web}
+\cvitem{description}{Web app for realignment and OCR of scanned forms}
+\cvitem{technologies}{Django, Python, Numpy, Pillow, OpenCV, PyTorch}
 \cvitem{link}{\url{https://qed.ai/scanform/} \newline}
 
-\cvitem{project}{ScanForm Mobile}
-\cvitem{description}{Android App for taking pictures and uploading them to webserver.}
-\cvitem{technologies}{Kotlin, Android SDK}
+\cvitem{app}{ScanForm Mobile}
+\cvitem{description}{Android App for taking pictures and uploading them to webserver}
+\cvitem{technologies}{Kotlin, Android SDK, OpenCV}
 \cvitem{link}{\href{https://play.google.com/store/apps/details?id=qed.scanform.scanner}{\underline{Google Play}}\newline}
 
-\subsection{AutoDrone/Hive}
+\subsection{\textsc{AutoDrone/Hive}}
 
-\cvitem{project}{AutoDrone}
-\cvitem{description}{Android app for automatic drone flights with DJI Phantom.}
+\cvitem{app}{AutoDrone}
+\cvitem{description}{Android app for automatic drone flights with DJI Phantom}
 \cvitem{technologies}{Android, Java, DJI SDK}
 \cvitem{links}{\href{https://play.google.com/store/apps/details?id=ai.qed.auto.drone}{\underline{Google
 Play}}, \url{https://qed.ai/drones/} \newline}
 
-\cvitem{project}{Hive}
+\cvitem{app}{Hive}
 \cvitem{description}{Web app for displaying drone orthomosaics on map. \newline
-  Orthomosaics are stiched from images taken with AutoDrone.}
+  Orthomosaics are stiched from images taken with AutoDrone}
 \cvitem{technologies}{Django, Python, OpenDroneMap}
 \cvitem{link}{\url{https://hive.qed.ai/\#48} \newline}
 
-\tlcventry{2016/10}{2017/05}{Software Engineer}{Working on Thesis}{\href{https://www.codilime.com/}{\underline{CodiLime}}}{Warsaw, Poland}{}
-\cvitem{title}{Scalable Graph Algorithms}
-\cvitem{description}{We implemented scalable versions of graph algorithms and compared their performance with single-core equivalents.}
-\cvitem{technologies}{C++, \href{https://developer.nvidia.com/thrust}{\underline{Thrust}}, CUDA, googletest}
-\cvitem{thesis}{\url{https://starsep.com/mimuw-graphs/thesis/thesis.pdf} [in Polish] \newline}
+\textbf{\cventry{2016--2017}{Software Engineer}{Working on Thesis}{\href{https://www.codilime.com/}{\underline{CodiLime}}}{Warsaw, Poland}{\newline}}
 
-\tlcventry{2016/7}{2016/9}{Software Engineer - Intern}{Summer Internship}{\href{https://intel.com}{\underline{Intel}}}{Gdańsk, Poland}{}
+\textbf{\cventry{summer 2016}{Software Engineer}{Internship}{\href{https://intel.com}{\underline{Intel}}}{Gdańsk, Poland}{}}
 \cvitem{description}{Frontend for internal software testing tool}
 \cvitem{technologies}{Angular, Flask, Python, Microsoft SQL Server}
+
+\newpage 
+
+\section{\textsc{Education}}
+\cventry{2018--2019}{Computer Science}{}{University of Warsaw}{\textit{Master's degree}}{}
+\cvitem{thesis}{\textit{\href{https://play.google.com/store/apps/details?id=io.storage.cloudbrowser}{\underline{Cloud Browser}}}}
+\cvitem{description}{File manager supporting multiple cloud storage providers with built-in video and music player}
+\cvitem{technologies}{Android SDK, Kotlin, C++\newline}
+
+\cventry{2014--2018}{Computer Science}{}{University of Warsaw}{\textit{Bachelor's degree}}{}
+\cvitem{thesis}{\textit{Scalable Graph Algorithms}}{}
+\cvitem{description}{Scalable versions of graph algorithms implementation and performance comparison with single-core equivalents}
+\cvitem{technologies}{C++, \href{https://developer.nvidia.com/thrust}{\underline{Thrust}}, CUDA, googletest}
+
+\section{\textsc{Skills}}
+\cvitem{languages}{Polish, English}
+\cvitem{web}{HTML, CSS, JavaScript, React}
+\cvitem{programming}{Python, Kotlin, Java, C, C++, Haskell}
+\cvitem{frameworks}{Django, Android SDK, React}
+\cvitem{databases}{PostgreSQL, SQLite}
+\cvitem{DevOps}{Linux, Bash, Zsh, Ansible, Vagrant}
+\cvitem{build systems}{GNU make, Gradle}
+\cvitem{other}{\LaTeX\xspace, git}
+
 
 \end{document}
