@@ -9,6 +9,6 @@ rm moderncv.zip
 cd moderncv
 sudo mkdir -p /usr/local/share/texmf/tex/latex/moderncv
 sudo cp *.sty *.cls -t /usr/local/share/texmf/tex/latex/moderncv/
-sudo mkdtexlsr
+sudo mktexlsr
 ```
 
