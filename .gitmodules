@@ -1,0 +1,3 @@
+[submodule "moderncv"]
+	path = moderncv
+	url = git@github.com:moderncv/moderncv.git
